@@ -537,6 +537,101 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* ── SALARY ── */
+  .salary-section {{
+    padding: 72px 24px 0;
+  }}
+
+  .salary-type {{
+    background: var(--night-mid);
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 12px;
+  }}
+
+  .salary-type-header {{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }}
+
+  .salary-type-icon {{
+    font-size: 18px;
+    width: 36px; height: 36px;
+    background: rgba(0,180,216,.12);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }}
+
+  .salary-type-name {{
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+  }}
+
+  .salary-items {{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }}
+
+  .salary-item {{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,.05);
+    font-size: 13px;
+  }}
+
+  .salary-item:last-child {{ border-bottom: none; }}
+
+  .salary-item-name {{ color: var(--text-muted); }}
+  .salary-item-price {{
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 13px;
+  }}
+
+  .salary-bonus {{
+    margin-top: 10px;
+    background: rgba(245,200,66,.06);
+    border: 1px solid rgba(245,200,66,.18);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.6;
+  }}
+
+  .salary-bonus strong {{ color: var(--gold); }}
+
+  .productivity-card {{
+    background: linear-gradient(135deg, rgba(0,180,216,.1) 0%, rgba(0,119,168,.08) 100%);
+    border: 1px solid rgba(0,180,216,.2);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-top: 12px;
+    text-align: center;
+  }}
+
+  .productivity-value {{
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--sky);
+    letter-spacing: -.02em;
+  }}
+
+  .productivity-label {{
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }}
+
 </style>
 </head>
 <body>
@@ -678,6 +773,56 @@
   </div>
 </div>
 
+
+<div style="height:1px; margin: 40px 24px 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent);"></div>
+
+<!-- ═══════════════ SALARY ═══════════════ -->
+<div class="salary-section reveal">
+  <div class="section-title">💰 專業酬勞說明</div>
+  <div style="font-size:13px; color:var(--text-muted); margin-top:6px; margin-bottom:20px; line-height:1.6;">任務酬勞 + 品質加給 + 影響力分潤</div>
+
+  <!-- 任務稿酬 -->
+  <div class="salary-type">
+    <div class="salary-type-header">
+      <div class="salary-type-icon">📋</div>
+      <div class="salary-type-name">① 任務稿酬（依專案難度）</div>
+    </div>
+    <div class="salary-items">
+      <div class="salary-item">
+        <span class="salary-item-name">週末逃離提案（3天2夜）</span>
+        <span class="salary-item-price">NT$1,200–1,800 / 份</span>
+      </div>
+      <div class="salary-item">
+        <span class="salary-item-name">深度主題企劃（5天以上）</span>
+        <span class="salary-item-price">NT$2,500–4,500 / 份</span>
+      </div>
+      <div class="salary-item">
+        <span class="salary-item-name">靈感快閃內容</span>
+        <span class="salary-item-price">NT$500–800 / 則</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 品質加給 -->
+  <div class="salary-type">
+    <div class="salary-type-header">
+      <div class="salary-type-icon">⭐</div>
+      <div class="salary-type-name">② 品質與影響力加給</div>
+    </div>
+    <div class="salary-bonus">
+      <strong>內容溢價：</strong>劇本若包含高品質實拍圖、精準地圖銜接邏輯，加成 <strong>+15%～20%</strong><br>
+      <br>
+      <strong>爆款獎金：</strong>劇本帶動訂單成交表現優異，另發放績效分潤
+    </div>
+  </div>
+
+  <!-- 時薪預估 -->
+  <div class="productivity-card">
+    <div class="productivity-value">NT$350–500</div>
+    <div class="productivity-label">熟練後平均時薪預估</div>
+  </div>
+</div>
+
 <!-- ═══════════════ WORK DETAILS ═══════════════ -->
 <div class="section reveal">
   <div class="section-title">工作型態</div>
@@ -728,6 +873,13 @@
       <div class="perk-text">
         <strong>長期累積</strong>｜能力＋收入<br>
         <span style="font-size:12px; color:var(--text-muted)">接觸全球旅遊趨勢，培養內容設計與企劃能力</span>
+      </div>
+    </div>
+    <div class="perk-item">
+      <span class="perk-icon">🏦</span>
+      <div class="perk-text">
+        <strong>旅遊公積金</strong>｜Travel Fund<br>
+        <span style="font-size:12px; color:var(--text-muted)">每完成一份劇本，額外提撥 5% 作為住宿餐飲補貼</span>
       </div>
     </div>
   </div>
